@@ -1,0 +1,42 @@
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+
+
+### npm ###
+node_modules
+package-lock.json
+.npm
+
+
+
+### Node ###
+.env
+*.env
+*.env.*
+*.local
+*.local.*
+*.secret
+*.secret.*
+coverage
+dist
+tmp
+temp
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+*.sublime-project
+*.sublime-workspace
+.vscode
+.idea
+*.iml
+.DS_Store
+Thumbs.db

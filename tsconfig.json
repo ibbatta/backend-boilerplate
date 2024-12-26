@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "baseUrl": "src",
+    "outDir": "dist",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "paths": {
+      "$configs/*": ["$configs/*"],
+      "$helpers/*": ["$helpers/*"],
+      "$middlewares/*": ["middlewares/*"],
+      "$models/*": ["models/*"],
+      "$controllers/*": ["controllers/*"],
+      "$routers/*": ["routers/*"],
+      "$queries/*": ["queries/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+}
