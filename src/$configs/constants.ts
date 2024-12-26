@@ -14,3 +14,8 @@ export const PROCESS_EVENTS = {
   SIGINT: "SIGINT",
   SIGTERM: "SIGTERM",
 };
+
+export const RATE_LIMIT_OPTS = {
+  windowMs: 1 * 60 * 1000, // 1 minute
+  limit: 100,
+};

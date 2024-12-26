@@ -6,9 +6,17 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
+import helmet from "helmet";
+import { rateLimit } from "express-rate-limit";
 import mongoose from "mongoose";
 
-import { DB_EVENTS, PROCESS_EVENTS, PORT_FALLBACK } from "$configs/constants";
+import {
+  DB_EVENTS,
+  PROCESS_EVENTS,
+  PORT_FALLBACK,
+  RATE_LIMIT_OPTS,
+} from "$configs/constants";
+
 import { GET_MONGO_URL } from "$configs/database";
 
 import routers from "$routers/index";
@@ -27,6 +35,8 @@ APP.use(
 );
 
 APP.use(compression());
+APP.use(helmet());
+APP.use(rateLimit(RATE_LIMIT_OPTS));
 APP.use(cookieParser());
 APP.use(bodyParser.json());
 APP.use(routers());
